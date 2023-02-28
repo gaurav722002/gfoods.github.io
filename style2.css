@@ -1,0 +1,698 @@
+body{
+    background-color: rgb(21, 21, 34);
+    background-color: #000000;
+    background-image: linear-gradient(43deg, #000000 0%, #2f3046 46%, #0b0b17 100%);
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+.background{
+    position: absolute;
+    z-index: -2;
+}
+.fade{
+    position: absolute;
+    width: 100%;
+    height: 900px;
+    background-color: black;
+    z-index: -1;
+    opacity: 0.5;
+}
+.head{
+    width: 100%;
+    background-size: cover;
+    position: relative;
+    height: 900px;
+}   
+.logo img{
+    width: 300px;
+    position: relative;
+    left: 35%;
+}
+#sidebuttn{
+    display: none;
+}
+.navigation{
+    height: 100%;
+    position: absolute;
+    left: -50%;
+    border-radius: 5%;
+    opacity: 1;
+    text-align: center;
+    font-size: larger;
+    background-color: rgb(14, 14, 33);
+    float: right;
+    width: 50%;
+    transition: 1s;
+}
+.navigation a{
+    display: block;
+    padding: 15px 0;
+    text-decoration: none;
+    color: rgb(254, 240, 204);
+    transition: 1s;
+}
+.navigation details{
+    padding: 15px 0;
+    transition: 1s;
+}
+#sidebuttn{
+    background-color: transparent;
+    position: absolute;
+    right: 0;
+}
+.nav{
+    text-align: center;
+    position: relative;
+    padding-top: 20px;
+    font-size: larger;
+}
+.nav a{
+    color: white;
+    text-decoration: none;
+    padding: 10px 40px;
+    display: inline-block;
+    position: relative;
+}
+#hover-anim::after{
+    content: ' ';
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    background-color: white;
+    bottom: 0;
+    left: 0%;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+#hover-anim:hover::after{
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
+.dropdown{
+    display: inline-block;
+    position: relative;
+}
+.dropdown a{
+    padding: 10px 40px;
+}
+.dropdown-content{
+    background-color: #f1f1f1;
+    min-width: 130px;
+    position: absolute;
+    top: 20px;
+    right: 6px;
+}
+.dropdown-content a{
+    display: none;
+    color: black;
+    padding:20px 0;
+}
+.dropdown-content a:hover{
+    background-color: rgb(129, 109, 0);
+    color: white;
+}
+.dropdown:hover .dropdown-content a{
+    display: block;
+}
+.text{
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    width: 500px;
+    margin-left: 50px;        
+}
+.text > button{
+    background-color: rgb(129, 109, 0);
+    color: white;
+    padding: 10px 20px;
+}
+.about{
+    background-size: cover;
+    display: flex;
+    padding: 50px 50px;
+    height: auto;
+    position: relative;
+}
+.about-text{
+    height: auto;
+    text-align: center;
+    background-color: rgb(129, 109, 0);
+    border-radius: 10%;
+    flex-basis: 50%;
+    padding-top: 20px;
+    margin-left: 20px;
+    font-size: 30px;
+    line-height: 1.4cm;
+    color: white;
+}
+.about img{
+    position: absolute;
+    right: 0;
+    border-radius: 50%;
+    margin-left: 40px;
+    margin: 30px;
+}    
+.midseg{
+    margin-top: 200px;
+}
+.chef{
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 375px;
+}
+.chef> img{
+    position: absolute;
+    left: 10%;
+    border-radius: 50% 0 0 50%;
+}
+.chef-text {
+    width: 50%;
+    height: 325px;
+    position: absolute;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1cm;
+    left: 29%;
+    padding-top: 50px;
+    padding-left: 30px;        
+    background-color: rgb(129, 109, 0);
+    color: white;
+    flex-basis: 50%;
+}
+.quality{
+    height: 325px;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.qua-text{
+    width: 50%;
+    height: 285px;
+    position: absolute;
+    left: 10%;
+    text-align: center;
+    padding-top:20px;
+    padding-right: 20px;
+    font-size: 20px;
+    line-height: 1cm;
+    background-color:  rgb(129, 109, 0);
+    color: white;
+    z-index: 1;
+}
+.quality> img{
+    position: absolute;
+    border-radius: 0 40% 45% 0;
+    top: 0;
+    right: 14%;
+}
+.clean{
+    position: relative;
+    height: 500px;
+    margin-bottom: 20px;
+
+}
+.clean>img{
+    position: absolute;
+    left: 10%;
+    border-radius:50% 0 0 50% ;
+}
+.clean-text{
+    position: absolute;
+    right: 15%;
+    width: 50%;
+    text-align: center;
+    height: 365px;
+    font-size: 20px;
+    line-height: 1cm;
+    padding: 18px 18px;
+    background-color: rgb(129, 109, 0);
+    color: white;
+}
+.menu-head{
+    position: relative;
+    text-align: center;
+    overflow-x: hidden;
+    margin-left: 20px;
+}
+.topseller{
+    text-align: center; 
+    font-size: 50px;
+    color: rgb(129, 109, 0);
+    text-shadow:2px 1px 23px black;
+}
+.menu-head a{
+    text-decoration: none;
+    border: 1px solid rgb(129, 109, 0);
+    background-color: rgb(129, 109, 0);
+    color: white;
+    border-radius: 10%;
+}
+.menu-head div{
+    position: relative;
+    display: inline-block;
+}
+.menu-head div .text{
+    position: absolute;
+    left: 0;
+    height: 70px;
+    top: 149px;
+    width: 400px;
+    line-height: 0.3cm;
+    font-size: medium;
+    background-color: rgb(129, 109, 0);
+    margin-left: 0;
+    text-align: center;
+    color: white;
+    display: none;
+    z-index: 1;
+}
+.menu-head div img{
+    width: 400px;
+}
+.menu-head .menu:hover img{
+    filter: blur(1.5px);
+    transform: scale(1.02);
+}
+.function{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.function button{
+    background-color: rgb(24, 24, 54);
+    color: rgb(129, 109, 0);
+    font-size: 25px;
+    height: 100px;
+    width: 300px;
+}
+.function button:hover{
+    background-color: rgb(129, 109, 0);
+    color: rgb(24, 24, 54) ;
+}
+.menu-head .menu:hover .text{
+    display: initial;
+}
+/**Form for reserve table**/
+.table{
+    background-image: url('https://images.unsplash.com/photo-1588710406418-bb90c807db72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+    background-size:cover;
+    background-attachment: fixed ;
+    height: 720px;
+    margin-top: 50px;
+    position: relative;
+    padding-left: 20px;
+}
+.table_info{
+    background-color: rgba(54, 42, 24, 0.7);
+    color: white;
+    border-radius: 10%;
+    text-shadow: 0 0 0 red;
+    font-size: 30px;
+    width: 50% ;
+    position: absolute;
+    top: 30%;
+    display: inline-block;
+}
+.table-text{
+    margin: 50px 0;
+    position: absolute;
+    right: 0;
+    color: rgb(24, 24, 54);
+    width: auto;
+    text-align: center;
+    padding-left: 50px;
+    background-color: rgb(129, 109, 0);
+    line-height: 2cm;
+    border-radius: 10%;
+} 
+.table-text h1{
+    font-size: 40px;
+    text-align: center;
+    border-bottom: 1px solid rgb(24, 24, 54);
+}
+.table .table-text input{
+font-size: 25px;
+width: 300px;
+height: 40px;
+}
+.table .table-text button{
+background-color: rgb(24, 24, 54);
+color: rgb(129, 109, 0);  
+width: 250px; 
+height: 100px;
+}
+/**End section**/
+.end{
+background-color: rgb(129, 109,0);
+display: block;
+font-size: 25px;
+color: white;
+text-align: center;
+}
+.end div{
+display: inline-block;
+}
+.end .timing{
+margin-right: 100px;
+}
+.copy{
+background-color: rgb(129, 109, 0);
+color: white;
+height: 50px;
+font-size: larger;
+text-align: center;
+}
+/**Responsive**/
+@media(max-width: 1080px){
+    .head{
+        width: auto;
+    }
+    .background,.fade{
+        vertical-align: middle;
+        height: 100%;
+    }
+    .about{
+        display: block;
+        background-color: rgb(129, 109, 0);
+        height: 850px;
+    }
+    .about-text{
+        width: 100%;
+        font-size: larger;
+    }
+    .about img{
+        width: 300px;
+        position: absolute;
+        left: 0;
+        margin: 0;
+        margin-left: 20px;
+    }
+   
+}
+@media(max-width:940px){
+    .nav{
+        padding-top: 20px;
+        font-size: larger;
+    }
+    .nav a{
+        padding-right: 10px;
+    }
+    .text{
+        position: absolute;
+        left: 0;
+        width: 350px;
+        font-size: larger;
+    }
+}
+@media(max-width:824px){
+    .menu-head div{
+        width: auto;
+        display: inline-block;
+    }
+    .menu-head div .text{
+        width: 100%;
+    }
+    .menu-head div img{
+        display: inline-block;
+        width: 287px;
+    }
+    .table{
+        background-image: none;
+        background-color: rgb(21, 21, 34);
+    }
+    .table_info{
+        display:block;
+        font-size: medium;
+        width: 50%;
+        position: absolute;
+        left: 0;
+    }
+    .table-text{
+        display: block;
+        height: 600px;
+    } }
+    .table-text h1{
+        font-size: 30px;
+        text-align: left;
+        margin-bottom: 0;
+        border-bottom: 1px solid rgb(24, 24, 54);
+    }
+    .table .table-text input{
+    font-size: 15px;
+    width: 200px;
+    height: 30px;
+    }
+    .table .table-text button{
+    background-color: rgb(24, 24, 54);
+    color: rgb(129, 109, 0);  
+    width: 250px; 
+    height: 40px;
+}
+@media(max-width:598px){
+    .menu-head div .text{
+        width: 100%;
+    }
+    .menu-head div img{
+        display: inline-block;
+        width: 100%;
+    }
+}
+@media(max-width:768px){
+    .midseg{
+        position: relative;
+    }
+    .chef{
+        height: 500px;
+        padding-top: 100px;
+        position: relative;
+        display: block;
+    }
+    .chef> img{
+        filter: blur(1.7px);
+        width: 90%;
+        height: 575px;
+        font-size: medium;
+        margin-top: 50px;
+        padding-bottom: 10px;
+        border-radius: 20%;
+        position: absolute;
+        top: -98px;
+        left: 4%;        
+        opacity: 0.4;
+    }
+    .chef-text {
+        background-color: transparent;
+        color: white;
+        width: 80%;
+        height: auto;
+        position: absolute;
+        left: 3%;
+        top: 0%;
+        display: block;
+    }
+    .quality{
+        margin-top: 50px;
+        height: 500px;
+        padding-top: 100px;
+        position: relative;
+        display: block;
+    }
+    .quality> img{
+        width: 94%;
+        height: 500px;
+        font-size: medium;
+        padding-bottom: 10px;
+        border-radius: 20%;
+        position: absolute;
+        top: 2px;
+        left: 3%;
+        opacity: 0.4;
+        filter: blur(0.8px);        
+    }
+    .qua-text{
+        width: 80%;
+        background-color: transparent;
+        height: auto;
+        position: absolute;
+        left: 2%;
+        top: 5%;
+        display: block;
+    }
+    .clean{
+        height: 500px;
+        padding-top: 100px;
+        position: relative;
+        display: block;
+    }
+    .clean> img{
+        width: 94%;
+        height: 575px;
+        font-size: medium;
+        margin-top: 50px;
+        padding-bottom: 10px;
+        border-radius: 20%;
+        position: absolute;
+        top: -98px;
+        left: 4%;
+        filter: blur(0.8px);
+        opacity: 0.5;        
+    }
+    .clean-text{
+        background-color: transparent;
+        width: 80%;
+        height: auto;
+        position: absolute;
+        left: 4%;
+        top: 6%;
+        display: block;
+    }
+}
+@media(max-width:980px){
+    .logo img{
+        position: relative;
+        left: 0;
+    }
+    .nav{
+        display: none;
+    }
+    #sidebuttn{
+        display: block;
+    }
+}
+@media(max-width:620px){
+    .table_info{
+        display: none;
+    }
+    .table-text{
+        width: 100%;
+        border-radius: 0px;
+    }
+    .table-text h1{
+        text-align: center;
+    }
+    .table-text input{
+        width: 25%;
+        border-radius: 0%;
+    }
+    .end{
+        padding: 0;
+        padding-top: 20px;
+    }
+    .end .timing{
+        width: 100%;
+        margin-right: 0;
+        font-size: large;
+        border-bottom: 1px solid white;
+    }
+    .end-contact{
+        width: 100%;
+        margin-right: 0;
+        font-size: large;
+    }
+}
+@media(max-width: 470px){
+    .text{
+        width: 100%;
+        text-align: center;
+        line-height: 0.8cm;
+        font-size: large;
+        margin-left: 0;
+    }
+    .about{
+        height: 1300px;
+        background-color: rgb(129, 109, 0);
+        text-align: left;
+        padding-left: 0;
+    }
+    .about img{
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+    }
+    .copy{
+        font-size: medium;
+        opacity: 0.8;
+    }
+}
+@media(max-width:415px){
+    .topseller{
+        font-size: 30px;
+    }
+}
+@media(max-width:300px){
+    .function button{
+        width: 100%;
+        height: auto;
+    }
+    .topseller{
+        font-size: 20px;
+    }
+}
+@media(max-width:370px){
+    .topseller{
+        margin-top: 100px;
+    }
+    .head .text{
+        text-align: left;
+        line-break: auto;
+    }
+    .menu-head{
+        margin: 0;
+    }
+    .about{
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
+    .about .about-text{
+        margin: 0;
+        text-align: left;
+    }
+    .midseg{
+        margin-top: 700px;
+    }
+    .midseg div{
+        padding: 0;
+        text-align: left;
+    }
+}
+@media(max-width:252px){
+    body{
+        width: 100%;
+        height: auto;
+    }
+    .table {
+        padding: 0px;
+    }
+    .table .table-text input{
+        font-size: 12px;
+        width: 90%;
+        height: auto;
+        }
+        .table .table-text button{
+            width: 100%;
+            height: auto;
+        }
+}
+@media(max-width:500px){
+    .logo{
+        display: inline;
+    }
+    .logo img{
+        width: 200px;
+    }
+}
+@media(max-width:369px){
+    .logo{
+        display: inline;
+    }
+    .logo img{
+        display: inline;
+        width: 150px;
+    }
+}
