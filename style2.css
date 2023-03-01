@@ -620,6 +620,9 @@ text-align: center;
     }
 }
 @media(max-width:415px){
+    .menu-head{
+        margin:0; 
+    }
     .topseller{
         font-size: 30px;
     }
